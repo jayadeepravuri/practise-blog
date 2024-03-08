@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-hg(l63*895pv9v-wn2!_=sq-2b%)au6wgs62mtt__mq@alr2hq"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-jayadeepravuri-practise-0wd5jlcud4.us1.codeanyapp.com',
                  '.herokuapp.com']
@@ -89,6 +89,11 @@ WSGI_APPLICATION = "codestar.wsgi.application"
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
