@@ -15,6 +15,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
+
     class Meta:
         ordering = ["-created_on"]
 
@@ -29,6 +30,7 @@ class Comment(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    challenge = models.FloatField(default=0.4)
 
 
 
