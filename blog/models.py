@@ -34,5 +34,4 @@ class Comment(models.Model):
     challenge = models.FloatField(default=0.4)
 
 
-
       
